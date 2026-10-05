@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function UnauthorizedPage() { return <main className="flex min-h-screen items-center justify-center px-6"><div className="max-w-md rounded-2xl border border-slate-200 bg-white p-8 text-center"><h1 className="text-2xl font-bold">Access denied</h1><p className="mt-3 text-slate-500">This page is available only to administrator accounts.</p><Link href="/" className="mt-6 inline-block rounded-lg bg-slate-900 px-4 py-2 text-white">Back to customer chat</Link></div></main>; }

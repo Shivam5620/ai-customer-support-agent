@@ -1,0 +1,33 @@
+{
+  "name": "ai-customer-support-agent",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "seed": "tsx scripts/seed.ts"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "lucide-react": "^0.545.0",
+    "mongoose": "^8.24.4",
+    "next": "^16.0.0",
+    "openai": "^6.49.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.3.3",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.19.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.8",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
