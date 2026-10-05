@@ -46,9 +46,20 @@ async function seed() {
     console.log(`Orders seeded: ${orders.length}`);
     console.log("Demo users seeded: admin@example.com and customer@example.com");
     console.log("Database seed completed successfully.");
-  } catch (error) {
-    console.error("Seed failed:", error);
-    process.exit(1);
+  }catch (error: any) {
+  console.error("❌ Seed failed:", error.message);
+
+  if (error?.reason?.servers) {
+    for (const [host, server] of error.reason.servers.entries()) {
+      console.log("\n-----------------------------");
+      console.log("HOST:", host);
+      console.log("STATE:", server?.type);
+      console.log("ERROR:", server?.error);
+    }
+  }
+
+  process.exit(1);
+
   } finally {
     await mongoose.disconnect();
   }
